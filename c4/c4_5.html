@@ -1,0 +1,32 @@
+<!-- Steffi Antony -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Text Color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="text">WEB PROGRAMMING LANGUAGE</p>
+        <button id="colorButton" onclick="changeTextColor()">Change Text Color</button>
+   
+<script>
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) 
+	{
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+function changeTextColor() 
+{
+    var textElement = document.getElementById('text');
+    textElement.style.color = getRandomColor();
+}
+
+</script>  
+</div>
+</body>
+</html>

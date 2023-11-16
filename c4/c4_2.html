@@ -1,0 +1,34 @@
+<!--Steffi Antony-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <div class="container">
+        <h1>Sum of 2 numbers</h1>
+        <form onsubmit="calculateSum(event)">
+            <input type="number" id="num1" placeholder="Enter first number" required>
+            <input type="number" id="num2" placeholder="Enter second number" required>
+            <button type="submit">Calculate Sum</button>
+        </form>
+        <p id="output"></p>
+<script> 
+function calculateSum(event) {
+    event.preventDefault();
+    
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById('output').textContent = "Please enter valid numbers.";
+    } else {
+        var sum = num1 + num2;
+        document.getElementById('output').textContent = "Sum: " + sum;
+    }
+}
+</script>
+</div>
+</body>
+</html>
